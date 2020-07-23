@@ -15,9 +15,9 @@ CREATE TABLE messages (
 
 /* Create other tables and define schemas for them here! */
 
-DROP TABLE IF EXISTS username;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE username (
+CREATE TABLE users (
   id INTEGER AUTO_INCREMENT NOT NULL,
   names VARCHAR(20) NOT NULL,
   Age INTEGER NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE username (
 );
 
 
-ALTER TABLE messages ADD FOREIGN KEY (user) REFERENCES username (id);
+ALTER TABLE messages ADD FOREIGN KEY (user) REFERENCES users (id);
 
 
 /*  Execute this file from the command line by typing:
